@@ -39,9 +39,10 @@ public class EnemyController : MonoBehaviour {
 	}
 
 	// resets the gameObject
-	private void _Reset() {
+	public void _Reset() {
 		this._CurrentSpeed = Random.Range (speed.minSpeed, speed.maxSpeed);
 		Vector2 resetPosition = new Vector2 (Random.Range(boundary.xMin, boundary.xMax), boundary.yMax);
 		gameObject.GetComponent<Transform> ().position = resetPosition;
 	}
 }
+
